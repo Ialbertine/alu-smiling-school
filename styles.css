@@ -1,0 +1,773 @@
+/* SUMMARY
+1. GLOBAL
+2. LAYOUT
+3. SECTION
+4. CARD
+*/
+
+
+/*** 1. GLOBAL ***/
+
+/* Reset / Normalize
+============================= */
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}
+
+@font-face {
+    font-family: 'holberton_school-icon';
+    src:  url('fonts/holberton_school-icon.eot?sq4eq4');
+    src:  url('fonts/holberton_school-icon.eot?sq4eq4#iefix') format('embedded-opentype'),
+    url('fonts/holberton_school-icon.ttf?sq4eq4') format('truetype'),
+    url('fonts/holberton_school-icon.woff?sq4eq4') format('woff'),
+    url('fonts/holberton_school-icon.svg?sq4eq4#holberton_school-icon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+.html {
+    scroll-behavior: smooth;
+}
+
+[class^="icons-img"], [class*="icons-img"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'holberton_school-icon' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+/* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/*** 2. ROOT ***/
+
+/* Variables
+============================= */
+
+:root {
+    --color-white: #FFFFFF;
+    --font-sans-pro: 'Source Sans Pro', sans-serif;
+}
+
+
+/*** 3. HEADER ***/
+
+/* Container
+============================= */
+
+.header {
+    width: 100%;
+    background-image: url("images/pic_1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0;
+}
+
+/* Img Logo
+============================= */
+
+.imagotype-img {
+    height: 1.9375rem;
+    width: 2.3125rem;
+}
+
+.imagotype-logo {
+    width: 6.9375rem;
+    height: 2rem;
+}
+
+.icons-img--burg::before {
+    content: "\e911";
+    color: var(--color-white);
+    font-size: 1.2em;
+}
+
+
+/* Nav Bar
+============================= */
+
+.navbar-nav {
+    margin-right: 6rem;
+}
+
+.nav-link {
+    font-family: var(--font-sans-pro);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 0.75rem;
+    color: var(--color-white);
+}
+
+.nav-a:hover {
+    color: #C271FF;
+}
+
+.nav-a::after {
+    content: "";
+    width: 0px;
+    height: 3px;
+    display: block;
+    background: var(--color-white);
+    transition: 300ms;
+}
+
+.nav-a:hover::after {
+    width: 100%;
+}
+
+/* Middle
+============================= */
+
+.title {
+    font-family: var(--font-sans-pro);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 7.5rem;
+    text-align: center;
+}
+
+.middle-text {
+    font-family: var(--font-sans-pro);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.register-btn {
+    border-radius: 1.375rem;
+    color: var(--color-white);
+    background-color: #C271FF;
+    font-size: 0.875rem;
+    border: 1px solid #C271FF;
+    padding: 1em 1em;
+    box-shadow: 0 0 3em rgba(0, 0, 0, .5);
+    font-family: var(--font-sans-pro);
+    font-weight: bold;
+    font-style: normal;
+}
+
+.register-btn:hover {
+    opacity: 0.9;
+}
+
+/* Techers Pro
+============================= */
+
+.title-h2 {
+    font-family: var(--font-sans-pro);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+/* Pro
+============================= */
+
+.pro {
+    margin-top: 10rem;
+    padding-bottom: 5rem;
+    box-sizing: border-box;
+}
+
+.pro-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+}
+
+.title-h2 {
+    margin-bottom: 7rem;
+}
+
+.pro-img {
+    border-radius: 10rem;
+    height: 9.375rem;
+    width: 9.375rem;
+}
+
+.pro-profile {
+    width: 9.375rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pro-title {
+    margin-top: 1rem;
+    font-size: 1.125rem;
+    font-weight: 900;
+}
+
+.pro-text {
+    font-size: 1rem;
+}
+
+.pro-title, .pro-text {
+    text-align: center;
+}
+
+
+
+/*** 4. MAIN ***/
+
+/* Title
+============================= */
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+/* Carrousel
+============================= */
+
+.carousel-b {
+    background-color: #C271FF;
+    display: flex;
+    align-items: stretch;
+    padding: 5rem 0;
+}
+
+.testimonials {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.testimonials-container {
+    justify-content: center;
+}
+
+
+/* Carrousel
+============================= */
+
+.img-carousel {
+    height: 10rem;
+    border-radius: 12rem;
+}
+
+.quote-text, .quote-title, .quote-job {
+    color: var(--color-white);
+    font-family:  var(--font-sans-pro);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.375rem;
+}
+
+.quote-title {
+    font-weight: bold;
+}
+
+.quote-textc {
+    width: 60%;
+}
+
+.prev-first {
+    opacity: 0;
+}
+
+.prev-first:hover {
+    visibility: visible;
+}
+
+/*** 5. MOST POPULAR VIDEOS  ***/
+
+.title-h2-videos {
+    font-family: var(--font-sans-pro);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-top: 6rem;
+    margin-bottom: 4rem;
+}
+
+
+/* Media
+============================= */
+
+.mcard-video {
+    width: 15.938rem;
+    height: 9.625rem;
+    border-top: 2rem;
+}
+
+.mcard-starts {
+    height: 0.938rem;
+    width: 0.938rem;
+}
+
+.mcard-img {
+    height: 1.875rem;
+    width: 1.875rem;
+    border-radius: 12rem;
+}
+
+/* Text
+============================= */
+
+.mcard {
+    width: 16rem;
+}
+
+.mcard-title, .mcard-text, .mcard-name {
+    font-family:  var(--font-sans-pro);
+}
+
+.mcard-title {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.mcard-text {
+    font-weight: 400;
+    font-size: 0.875rem;
+}
+
+.mcard-name, .mcard-time {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #C271FF;
+}
+
+.mcard-text {
+    opacity: 0.5;
+}
+
+.card {
+    border: 0;
+}
+
+.mcard-play {
+    position: relative;
+    height: 4rem;
+    width: 4rem;
+    top: -7rem;
+    left: 5.7rem;
+}
+
+.mcard-video {
+    box-sizing: border-box;
+    height: 9.625rem;
+}
+
+
+
+/*** 5. SMILES ***/
+
+/* Container
+============================= */
+
+.smiles {
+    background-color: #071629;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.smiles > h2 {
+    margin-top: 3em;
+}
+
+.smiles-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.smiles-wrap {
+    margin: 0 4em;
+}
+
+.smiles-context {
+    margin-top: 1em;
+    margin-left: 4em;
+    margin-right: 4em;
+    margin-bottom: 2em;
+}
+
+/* Text
+============================= */
+
+.smiles-title, .smiles-txt {
+    font-family: var(--font-sans-pro);
+    font-style: normal;
+    color: var(--color-white);
+    text-align: center;
+}
+
+.smiles-title {
+    font-weight: 600;
+    font-size: 1.125rem;
+    margin-top: 1em;
+}
+
+.smiles-txt {
+    font-weight: 400;
+    font-size: 0.875rem;
+}
+
+/* Image
+============================= */
+
+.smiles-img {
+    height: 2.25rem;
+    width: 2.8125rem;
+}
+
+
+/** 6. Footer **/
+
+/* Container
+============================= */
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    vertical-align: bottom;
+    background-color: black;
+}
+
+.mark {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 4em;
+    background-color: black;
+}
+
+.network {
+    display: flex;
+    flex-direction: row;
+}
+
+.copyright {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 4em;
+    margin-bottom: 1em;
+}
+
+/* Images
+============================= */
+
+.network-facebook::before {
+    content: "\e908";
+}
+
+.network-twitter::before {
+    content: "\e90f";
+}
+
+.network-instagram::before {
+    content: "\e90a";
+}
+
+.mark-img {
+    height: auto;
+    width: var(--width-logo-image);
+}
+
+.network-facebook--size {
+    color: var(--color-white);
+    font-size: 2em;
+    margin-right: 0.50em;
+}
+
+/* Text
+============================= */
+
+.copyright-text {
+    font-family: var(--font-sans-pro);
+    color: gray;
+}
+
+/* Decoration
+============================= */
+
+.network-facebook:hover, .network-twitter:hover, .network-instagram:hover {
+    opacity: 0.5;
+}
+
+.copyright-text:hover {
+    text-decoration: underline;
+}
+
+
+
+/** PRICING **/
+
+
+/*** 1. HEADER ***/
+
+/* Container
+============================= */
+.header-pricing {
+    width: 100%;
+    background-image: url("images/pic_2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0;
+    font-size: var(--font-sans-pro);
+}
+
+.icons-img--check::before {
+    content: "\e905";
+    font-size: 2rem;
+    color: #82D24F;
+}
+
+
+/* Table
+============================= */
+
+.table {
+    table-layout: fixed;
+    width: 80%;
+}
+
+.table--margin {
+    margin: 4rem 10rem;
+}
+
+.table td, .table {
+    padding: 1.5rem;
+    border-top: 0;
+    border-bottom: 1px solid gray;
+    vertical-align: middle;
+}
+
+th, .table thead th {
+    border: 0;
+}
+
+/*** 2. FAQ ***/
+
+/* Container
+============================= */
+
+.faq-container {
+    margin: 1rem 12rem;
+}
+
+.faq-question {
+    margin-top: 4rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-bottom: 4rem;
+}
+
+
+
+/** COURSES **/
+
+/** 1. HEADER **/
+
+/* Container
+============================= */
+
+.header-courses {
+    width: 100%;
+    background-image: url("images/pic_3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0;
+    font-size: var(--font-sans-pro);
+}
+
+.phrase-title {
+    padding: 0 2rem 3rem 2rem;
+    flex-basis: 33rem;
+}
+
+/* Search filter
+============================= */
+
+.search {
+    background-color: #C271FF;
+    padding: 2rem;
+}
+
+.icons-img--search-logo::after {
+    content: "\e913";
+    color: var(--color-white);
+}
+
+.form-control:focus {
+    border-color: none;
+    box-shadow: none;
+}
+
+.input-group-text, .form-control, .mbn {
+    background-color: #d195ff;
+    border-color: #d195ff;
+    color: #e8caff;
+    font-family: var(--font-sans-pro);
+    font-weight: 300;
+    font-size: 1.4375rem;
+}
+
+.mbn, .input-group {
+    width: 100% !important;
+}
+
+/* Dropdown
+============================= */
+
+.mbn, .mbn:active, .mbn:hover, .mbn:focus, .mbn:focus-within, .mbn:visited {
+    background-color: #d195ff !important;
+    border-color: #d195ff !important;
+    border-bottom-color: white !important;
+    box-shadow: none !important;
+}
+
+.mbn, .search-title {
+    color: var(--color-white);
+}
+
+.search-title {
+    font-family: var(--font-sans-pro);
+    font-weight: 700;
+    font-size: 0.75rem;
+}
+
+.dropdown-item:hover {
+    color: #d195ff;
+    background-color: transparent;
+}
+
+
+.results-container {
+    margin: 5rem;
+}
+
+
+
+@media (max-width: 576px) {
+/*** 3. HEADER ***/
+
+/* Title
+============================= */
+.title {
+    font-size: 3.8125rem;
+}
+
+/* Container
+============================= */
+.header {
+    background-position: -45em;
+}
+
+/* Nav
+============================= */
+.navbar-nav {
+    margin-right: 0;
+}
+
+.nav-link:active {
+    opacity: 0.9;
+}
+
+.register-btn:active {
+    opacity: 0.9;
+}
+
+/* Pro
+============================= */
+.pro-container {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/*** 4. MAIN ***/
+/* Carrousel
+============================= */
+
+.img-carousel {
+    height: auto;
+    width: 10rem;
+}
+
+/*** 6. FOOTER ***/
+/* Responsive
+============================= */
+.mark {
+    flex-direction: column;
+}
+
+.network {
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.table--margin {
+    margin: 0;
+}
+
+/*** 2-PRICING ***/
+
+
+/* Container
+============================= */
+.faq-container {
+    margin: 1rem 0;
+}
+
+/*** 3. HEADER ***/
+
+.header-pricing {
+    background-position: -55rem;
+}
+}
+
+
+@media (max-width: 768px) {
+/*** 3. HEADER ***/
+
+/* Pro
+============================= */
+.header {
+    background-position: -25em;
+}
+
+/*** 4. MAIN ***/
+
+/* Carrousel
+============================= */
+
+.img-carousel {
+    height: auto;
+    width: 10rem;
+}
+
+
+.navbar-nav {
+    margin-right: 0;
+}
+
+.table--margin {
+    margin: 0;
+}
+}
+
+
+@media (max-width: 1000px) {
+.faq-container {
+    margin: 1rem 0;
+}
+
+.header-pricing {
+    background-position: -28em;
+}
+}
